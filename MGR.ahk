@@ -18,17 +18,17 @@ return
 #Include lib\GetConfig.ahk
 #Include lib\GetMods.ahk
 #Include lib\m.ahk
-#Include 
-#Include 
-#Include 
-#Include 
-#Include 
-#Include 
-#Include 
-#Include 
+#Include lib\mgr Execute.ahk
+#Include lib\mgr GetCommand.ahk
+#Include lib\mgr GetDirection.ahk
+#Include lib\mgr MonitorGesture.ahk
+#Include lib\mgr MonitorRButton.ahk
+#Include lib\mgr RemoveDups.ahk
+#Include lib\mgr RemoveTips tmr.ahk
+#Include lib\mgr Trim.ahk
 #Include lib\MGR_UDF.ahk
-#Include 
+#Include lib\RegisterHotkeys.ahk
 #Include lib\Reload.ahk
-#Include 
+#Include lib\showTTtoggle.ahk
 #Include lib\TrayMenu.ahk
 #Include lib\tt.ahk
