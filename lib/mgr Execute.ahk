@@ -1,5 +1,5 @@
 mgr_Execute(Command) {
-	if (!Command)
+	if (!Command:=Trim(Command))
 		return
 	Transform, Command, Deref, % Command
 	

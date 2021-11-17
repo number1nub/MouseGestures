@@ -1,11 +1,12 @@
 mgr_MonitorGesture() { ; Monitor the mouse directions to get the gesture
+	startPos:=[]
 	While GetKeyState(mainHotkey, "P") {
 		MouseGetPos, x1, y1
+		startPos := Abs(startPos[1])>0 ? startPos : [x1, y1]
 		While GetKeyState(mainHotkey, "P") {
 			Sleep, 10
 			MouseGetPos, x2, y2
-			if (Sqrt((x2-x1)**2+(y2-y1)**2)>=15)							; if the module is greater or equal than 35,
-			{
+			if (Sqrt((x2-x1)**2+(y2-y1)**2)>=15) {							; if the module is greater or equal than 35,
 				Direction := mgr_GetDirection(x2-x1, y2-y1)					;	Get hotkey modifiers & the mouse movement direction
 				x1 := x2 , y1 := y2											;	Update the origin point
 				if (Direction && LastDirection && Direction<>LastDirection)	;	if the direction has changed,
