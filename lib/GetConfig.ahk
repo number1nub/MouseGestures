@@ -18,7 +18,7 @@ GetConfig(fName:="Commands.ini") {
 		if (!FileExist(cfgDir))
 			FileCreateDir, %cfgDir%
 		if (A_IsCompiled)
-			FileInstall, ConfigTemplate.ini, %cfgPath%
+			FileInstall, res\ConfigTemplate.ini, %cfgPath%
 		else
 			FileAppend, % ConfigTemplate(), %cfgPath%
 		return cfgPath
