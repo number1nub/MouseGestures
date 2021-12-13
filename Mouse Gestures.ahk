@@ -12,7 +12,7 @@ CheckAdmin()
 AppName    := "Mouse Gestures"
 ;@Ahk2Exe-Let AppName = %A_PriorLine~U)^(.+"){1}(.+)".*$~$2%
 
-AppVersion := "3.2.3.0"
+AppVersion := "3.2.4.0"
 ;@Ahk2Exe-Let AppVersion = %A_PriorLine~U)^(.+"){1}(.+)".*$~$2%
 
 AppCompany := "WSNHapps"

@@ -6,6 +6,10 @@ Perform custom actions when a specified gesture is input with the mouse. Actions
 Changelog
 ---------
 
+### 3.2.4
+- [Fixed] Update URL encoding
+- [Changed] Update will now always download the compiled EXE
+
 ### 3.2.0
 - Moved to VS Code setup for source, build & versioning
 - Fixed bad version on last release
