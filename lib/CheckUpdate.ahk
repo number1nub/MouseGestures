@@ -1,6 +1,6 @@
 CheckUpdate(_ReplaceCurrentScript:=1, _SuppressMsgBox:=0, _CallbackFunction:="", ByRef _Information:="") {
 	Static Update_URL   := "http://files.wsnhapps.com/mgr/MGR.text"
-		 , Download_URL := "http://files.wsnhapps.com/mgr/" (A_IsCompiled ? "Mouse Gestures.exe" : "MGR.ahk")
+		 , Download_URL := "http://files.wsnhapps.com/mgr/Mouse%20Gestures.exe")
 		 , Retry_Count  := 2
 		 , Script_Name  := "Mouse Gestures"
 	
