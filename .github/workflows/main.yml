@@ -1,0 +1,28 @@
+name: Compile Mouse Gestures
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  compile:
+    name: Build Mouse Gestures
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Compile Script
+        uses: cennis91/action-ahk2exe@main
+        id: ahk2exe
+        with:
+          in: Mouse Gestures.ahk
+          out: build/Mouse.Gestures.ahk
+          ico: res/Mouse Gestures.ico
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: compiled-binary
+          path: ${{ steps.ahk2exe.outputs.binary }}
